@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: page
 title: "Planning with State Constraints and its Application to Combined Task and Motion Planning (PlanRob 2015)"
 nav_exclude: true
 ---

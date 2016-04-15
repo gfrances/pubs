@@ -1,193 +1,185 @@
-# tufte-jekyll theme
+# Immaculate
 
-The *Tufte-Jekyll* blog theme is based on the github repository by Edward Tufte [here](https://github.com/edwardtufte/tufte-css), which was orginally created by Dave Leipmann, but is now labeled under Edward Tufte's moniker. I borrowed freely from the Tufte-CSS repo and have transformed many of the typographic and page-structural features into a set of custom Liquid tags that make creating content using this style much easier than writing straight HTML. Essentially, if you know markdown, and mix in a few custom Liquid tags, you can be creating a website with this document style in short order.
+A beautiful, fast, AMP-compliant Jekyll theme based on Tufte CSS.
 
-## Demo
+[Check it out here!](https://cdn.ampproject.org/c/siawyoung.com/immaculate/)
 
-A sample site with self-documenting content is available [here](http://clayh53.github.io/tufte-jekyll/) on github pages.
+[Google AMP](https://www.ampproject.org/)
 
-## Installation
+[Tufte CSS](https://github.com/edwardtufte/tufte-css)
 
-I'm not going to go into great detail here. I am just going to assume that anyone interested in either Jekyll, Edward Tufte's work or Github has some basic skills. I created this with Ruby 2.2.0 and Jekyll 2.5.3. There is absolutely nothing exotic going on here, so you can probably make any recent version of Jekyll work with this setup.
+Immaculate is really fast, thanks to Google AMP. When served over Google's CDN, you will see typical `DOMContentLoaded` times of well under 100ms (when using the leaner stylesheet, see below). The benefits are most obvious for slower connections. On the *Regular - 2G* throttling setting in Chrome, the demo page still manages a `DOMContentLoaded` of under 500ms.
 
-So copy, pull, download a zipfile or whatever and fire it up.
+Immaculate includes tag support for some of the more commonly-used Tufte CSS layout options, including sidenotes, margin notes, and full-width figures. Other features, such as `newthought` or epigraphs, can be used by typing raw HTML in your Markdown files. I might add helper tags for these in the future.
 
-```
-cd ~/thatPlaceYouPutIt/tufte-jekyll
-jekyll build
-jekyll serve -w
-```
+**Caveat (need hep!)**: AMP HTML does not allow form elements, including checkboxes, which are used in Tufte CSS to toggle the display of sidenotes and margin notes at smaller widths. As such, I've modified Immaculate to disable this functionality at smaller widths for the time being. It's a big deal, and I'm looking for help on emulating this functionality without using checkboxes.
 
-And then point your browser at localhost:4000/tufte-jekyll
-
-You can also use `jekyll serve -w --baseurl ''` to remove `/tufte-jekyll` from the url and serve your site directly from localhost:4000. This only affects your local preview. See [Setting your baseurl correctly](#setting-your-baseurl-correctly) for more details.
-
-## Configuration
-
-### Jekyll site building options
-
-I have created a very simple site options file in the ```_data``` directory that contains two settings currently. The file in the github repo looks like this:
-```
-mathjax: true
-lato_font_load: true
-```
-Removing either 'true' value will prevent the jekyll site building process from adding links to either the Mathjax library or the Google Fonts Lato font as a fallback for the Gill Sans. Set these values to blank if you want to really streamline your page loading time.
-
-### SASS
-
-I am using Sass to create the css file used by this theme. If you would like to change things like fonts, text colors, background colors and so forth, edit the ```_scss/_settings.scss``` file. This file gets loaded first when Jekyll constructs the master CSS file from the tufte.scss SASS file, and contains SASS variables that influence the appearance of the site. The one variable that may be of interest to some is the ```$link-style``` variable, which can be set to either ```underline``` or ```color```. This will determine if your links are styled using the ```$contrast-color``` variable with no underlining, or whether they are styled using light underlining as seen on the [*tufte-css*](https://github.com/edwardtufte/tufte-css) repo.
-
-### Social icons
-
-You can edit the ```_data/social.yml``` file and put in your own information for the footer links
-
-### Silly-ass badge in the upper left
-
-In the ```assets/img``` directory is a file called ```badge_1.png```. This file's parent is ```badge_1.psd``` and is an editable photoshop file with layers for the letters comprising the initials. Change them to suit your fancy. Or just substitute another badge in its place. You can edit the ```_includes/header.html``` file and change the file that it points too. Find your favorite Tufte emoji and fly your freak flag proudly.
-
-## Some things about the things
-
-I needed to create several custom Liquid tags to wrap content in the right kind of tags. You will create your posts in the normal way in the ```_posts``` directory, and then edit them with Github-Flavored Markdown. To all that GFM goodness, you can use the following custom Liquid tags in your content area.
-
-Note that these tags *have been altered* from Version 1 of this theme to accommodate some responsive features, namely the ability to reveal hidden sidenotes, margin notes and margin figures by tapping either a superscript or a symbol on small screens. This requires you to add a parameter to the tag that is a unique *ID* for each tag instance on the page. What the id is called is not important, but it is important that it be unique for each individual element on the page. I would recommend in the interest of sanity to give names that are descriptive, like ```'sn-id-1'``` or ```'mf-id-rhino'```.
-
-### Notes about quotes in Liquid tags
-
-The custom Liquid tags are designed to simplify writing content and displaying it with the *tufte-css* look. Here are a few notes on using quotes inside the tags.
-
-* Liquid tags work best when you use double quotes to surround the tag parameters, as you'll see in all the examples below.
-
-* You can use single quotes and apostrophes in the text inside tag parameters. Liquid will automatically process them correctly. For example: `{% newthought "I'm so smart!" %}` will render as `I'm so smart!`
-
-* To use a double quote in the text inside a tag parameter, escape the double quote by placing a backslash directly in front of it, for example: `{% newthought "\"I'm so smart!\", she thought." %}` will render as `"I'm so smart!", she thought.`
-
-* You can use HTML inside of a tag parameter. (However, you cannot use Markdown inside a tag parameter) You can use either single quotes, or escaped double quotes in the HTML. For example, both of the following tags will work:
+## Getting Started
 
 ```
-{% newthought "Example website: <a href='http://example.com'>example label</a>" %}
-```
-```
-{% newthought "Example website: <a href=\"http://example.com\">example label</a>" %}
+git clone git@github.com:siawyoung/immaculate.git
+cd immaculate
+bundle install
+bundle exec jekyll serve --baseurl ''
 ```
 
-The [demo site's Edge Cases entry](http://clayh53.github.io/tufte-jekyll/articles/15/Edge-Cases) has an example toward the bottom illustrating HTML inside of a tag parameter.
+Modify the template files and `_config.yml` to your liking, and publish away!
 
-### New thought
+## Helper Tags
 
-This tag will render its contents in small caps. Useful at the beginning of new sections:
+Immaculate comes with a few helper tags. The source code for these tags can be found in `_plugins/shortcodes.rb`.
+
+### Image
 
 ```
-{% newthought "This will be rendered in small caps" %} blah blah
+{% image <src> <width> <height> <option?> %}
+```
+
+The `image` tag allows you to insert AMP-compliant images into the post.
+
+`src` is the `src` attribute of the image tag.
+
+`width` and `height` of the image must be specified, as per AMP specifications.
+
+`option` - an optional argument which supports the following options:
+
+- `fw` - makes the image full width
+- `raw` - outputs the raw `amp-img` tag, can be used in conjunction with margin notes
+
+##### Example usage
+
+```
+{% image https://image.com/image.jpg 1200 600 fw %}
+```
+
+### Youtube
+
+```
+{% youtube <id> <width> <height> <option?> %}
+```
+
+The `youtube` tag allows you to insert AMP-compliant embedded Youtube videos into the post.
+
+`id` is the Youtube viddeo ID.
+
+`width` and `height` of the video must be specified, as per AMP specifications.
+
+`option` - an optional argument which supports the following options:
+
+- `fw` - makes the video full width
+- `raw` - outputs the raw `amp-youtube` tag, can be used in conjunction with margin notes
+
+##### Example usage
+
+```
+{% youtube aj2h3h1sf 600 400 %}
 ```
 
 ### Sidenote
 
-This tag inserts a *sidenote* in the content, which is like a footnote, only its in the spacious right-hand column. It is automatically numbered, starting over on each page. Just put it in the content like you would insert a footnote like so:
+(See caveat above)
 
 ```
-blah lorem blah{% sidenote "sidenote-id" "This is a random sidenote" %} blah blah
-```
-And it will add the html spans and superscripts. On smaller screens, tapping on the number will reveal the sidenote!
-
-The `full-width` page layout will not display side notes. (It's a full-width page and has no margin)
-
-### Margin note
-
-This tag is essentially the same as a sidenote, but heh, no number. Like this:
-
-```
-lorem nobeer toasty critters{% marginnote "margin-note-id" "Random thought when drinking" %} continue train of thought
-```
-On smaller screens, tapping on the <span>&#8853;</span> symbol will open up the margin note.
-
-The `full-width` page layout will not display margin notes. (It's a full-width page and has no margin)
-
-### Full width image
-
-This tag inserts an image that spans both the main content column and the side column:
-
-```
-blah blah
-{% fullwidth "assets/img/rhino.png" "A caption for the image" %}
-blah
+{% sidenote <id> <body> %}
 ```
 
-or
+The `sidenote` tag allows you insert sidenotes into the post.
+
+`id` is a unique identifier for the sidenote, and it can be anything - it will not show up visually.
+
+`body` is the body of the sidenote. It can also accommodate `span`-level HTML elements (`<b>`, `<em>`, `<i>`, no block-level elements).
+
+##### Example usage
 
 ```
-blah blah
-{% fullwidth "http://example.com/image.jpg" "A caption for the image" %}
-blah
+This is a very long{% sidenote meh Yes, <i>very</i> long. %} sentence.
 ```
 
-Note the absence of a leading slash in the image url when using relative file paths. (This is incorrect: `/assets/img/rhino.png`)
+### Margin Note
 
-Also note that fullwidth images need to be included *on their own line* in order for the captions to work correctly.
-
-### Main column image
-
-This tag inserts an image that is confined to the main content column:
+(See caveat above)
 
 ```
-blah blah
-{% maincolumn "assets/img/rhino.png" "This is the caption" %}
-blah
+{% marginnote <id> %}
+<body>
+{% endmarginnote %}
 ```
 
-or
+The `marginnote` tag block allows you to insert margin notes into the post.
+
+`id` is a unique identifier for the margin note, and it can be anything - it will not show up visually.
+
+`body` is the body of the sidenote. It can also accommodate `span`-level HTML elements (`<b>`, `<em>`, `<i>`, no block-level elements).
+
+You can also use margin notes in conjunction with `image` and `youtube` tags by specifying the `raw` option.
+
+##### Example usage
 
 ```
-blah blah
-{% maincolumn "http://example.com/image.jpg" "This is the caption" %}
-blah
+{% marginnote yt %}
+{% youtube aj2h3h1sf 350 200 raw %}
+This is a <b>extremely</b> succinct example.
+{% endmarginnote %}
 ```
 
-No need for an ID in this tag because it doesn't have any doohickies that open and close on narrow screens. Again note the absence of the leading slash in the image url when using relative file paths. (This is incorrect: `/assets/img/rhino.png`)
-
-And just like fullwidth images, main column images need to be included on their own line in order for the captions to work correctly.
-
-### Margin figure
-
-This tag inserts and image in the side column area. Note that an id needs to be specified:
+### Blockquote
 
 ```
-blah blah {% marginfigure "margin-figure-id" "assets/img/rhino.png" "This is the caption" %} blah
+{% blockquote <footer> %}
+<body>
+{% endblockquote %}
 ```
 
-or
+Standard Markdown blockquotes are supported by Immaculate. Additionally, the `blockquote` tag block allows you to insert Tufte-styled blockquotes with footers.
+
+##### Example usage
 
 ```
-blah blah {% marginfigure "margin-figure-id" "http://example.com/image.jpg" "This is the caption" %} blah
+{% blockquote Friedrich Nietzsche, Thus Spoke Zarathustra %}
+
+But say, my brothers, what can the child do that even the lion could not do? Why must the preying lion still become a child? The child is innocence and forgetting, a new beginning, a game, a self-propelled wheel, a first movement, a sacred “Yes.” For the game of creation, my brothers, a sacred “Yes” is needed: the spirit now wills his own will, and he who had been lost to the world now conquers the world.
+
+{% endblockquote %}
 ```
 
-This needs an ID parameter so that it can be clicked and opened on small screens. Again note the absence of the leading slash in the image url when using relative file paths. (This is incorrect: `/assets/img/rhino.png`)
+## Even faster performance
 
-The `full-width` page layout will not display margin figures. (It's a full-width page and has no margin)
+By default, Immaculate will utilize Tufte CSS's default font stack, which uses `et-book`. The custom font files are about 160kb in total, which is somewhat of a strain. If performance is important, Immaculate also ships with a leaner version of Tufte CSS, which uses just [the Palatino stack instead](http://www.cssfontstack.com/Palatino). It has 99.29% Mac and 86.13% Windows distribution.
 
-### Mathjax
-
-Totally used this functionality from a [gist by Jessy Cowan-Sharpe](https://gist.github.com/jessykate/834610) to make working with Mathjax expressions a little easier. Short version, wrap inline math in a tag pair thusly: ```{% m %}mathjax expression{% em %}``` and wrap bigger block level stuff with ```{% math %}mathjax expression{% endmath %}```
-
-As a side note - if you do not need the math ability, navigate to the ```_data/options.yml``` file and change the mathjax to 'false' and it will not load the mathjax javascript.
-
-### Setting your baseurl correctly
-
-In the `_config.yml` file is a setting called `baseurl`. This is used by the Jekyll engine to construct all the proper links in the static site. Right now it is set to `/tufte-jekyll` since this project is using Github Pages and you are required to set the project name as the baseurl to serve from Github Pages.
-
-Set this to your own project name if you're going to serve your site from Github Pages. Be sure to include the leading slash, and no trailing slash. For example: `/my-project-name`
-
-For a full explanation of setting your baseurl to work with Github Pages, see the [Project Page URL Structure](http://jekyllrb.com/docs/github-pages/#project-page-url-structure) section of the Jekyll documentation.
-
-To serve from anywhere else besides Github Pages, use a blank baseurl in your `_config.yml` file:
+You just need to change the following line in `_includes/styles.scss`:
 
 ```
-baseurl:
+@import 'tufte';
+// change to:
+@import 'lean_tufte';
 ```
 
-This is `baseurl:` with nothing after it. Not even a space.
+Just from pure anecdotal experience, using the leaner stylesheet reduces typical `DOMContentLoaded` times from 300ms down to 50ms when served through Google's CDN. Personally, `et-book` just looks a lot better to me, so pick whatever floats your boat.
 
-### Rakefile
+## Syntax highlighting
 
-I have added a boilerplate Rakefile directly from the [jekyll-rake-boilerplate repo](https://github.com/gummesson/jekyll-rake-boilerplate). This saves you a small amount of time by prepending the date on a post name and populated the bare minimum of YAML front matter in the file. Please visit the link to the repo to find out how it runs. One thing to note is that there should be *no* space between the task and the opening bracket of your file name. ```rake post["Title"]``` will work while ```rake post ["Title"]``` will not.
+Immaculate supports syntax highlighting, but the stylesheet is commented out by default to keep the page lean. Simply uncomment the following line in `_includes/styles.scss`:
 
-There is another rakefile (UploadtoGithub.Rakefile) included that only has one task in it - an automated upload to a *Github Pages* location of the site. This is necessary because of the plugins used by this theme. It does scary stuff like move your ```_site``` somewhere safe, delete everything, move the ```_site``` back and then do a commit to the ```gh-pages``` branch of your repository. You can read about it [here](http://blog.nitrous.io/2013/08/30/using-jekyll-plugins-on-github-pages.html). You would only need to use this if you are using Github project pages to host your site. Integration with the existing Rakefile is left as an exercise for the reader.
+```css
+// @import 'syntax-highlighting';
+```
+
+## FAQ
+
+*How can I use the sans-serif versin of Tufte CSS, which uses Gill Sans?*
+
+You can override the CSS style in `_includes/styles.scss` with the font stack of your choice:
+
+```
+body {
+  font-family: "Gill Sans"
+}
+```
+
+## Credits
+
+Credits to [Amplify](https://github.com/ageitgey/amplify) for most of the AMP-related code.
+
+## License
+
+MIT

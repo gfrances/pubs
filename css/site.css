@@ -1,0 +1,19 @@
+
+a.page-link.active {
+	font-weight: bold;
+}
+
+/*
+a.page-link.active:before{ content:"\0003c\000a0";}
+a.page-link.active:after{ content:"\000a0\0003e";}
+*/
+
+a.contrast {
+	color: #a00000;
+	text-decoration: none;
+	background: none;
+}
+
+.pubyear {
+	font-weight: bold;
+}

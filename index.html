@@ -1,57 +1,40 @@
 ---
-layout: full-width
-title: Academic Publications
-# Note that this index page uses a full-width layout!
+layout: default
 ---
 
-  <h1 class="content-listing-header sans">Academic Publications</h1>
+  <section>
+      <h1>{{ site.title }}</h1>
+      <h3>{{ site.description }}</h3>
+  </section>
 
-    <p>This site contains information and additional data and references from some of scientific publications:</p>
+  <p>Click on the publication title to access its information.</p>
 
-    <ol class="content-listing ">
+  <ul class="content-listing">
 
-        <li class="">
-            Francès, G., and Geffner, H. 2016.
-            <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.ijcai2016existential.slug }}"><span class="contrast">{{ site.pubs.ijcai2016existential.title }}</span></a>.
-            In Proc. of the 25th Int. Joint Conf. on Artificial Intelligence (IJCAI 2016)
-        </li>
+      <li class="">
+          <span class="pubyear">[2016]</span> Francès, G., and Geffner, H.
+          <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.ijcai2016existential.slug }}" class="contrast">{{ site.pubs.ijcai2016existential.title }}</a>.
+          In Proc. of the 25th Int. Joint Conf. on Artificial Intelligence (IJCAI 2016)
+      </li>
 
-        <li class="">
-            Francès, G., and Geffner, H. 2016.
-            <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.ijcai2016effective.slug }}"><span class="contrast">{{ site.pubs.ijcai2016effective.title }}</span></a>.
-            In Proc. of the 25th Int. Joint Conf. on Artificial Intelligence (IJCAI 2016)
-        </li>
+      <li class="">
+          <span class="pubyear">[2016]</span> Francès, G., and Geffner, H..
+          <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.ijcai2016effective.slug }}" class="contrast">{{ site.pubs.ijcai2016effective.title }}</a>.
+          In Proc. of the 25th Int. Joint Conf. on Artificial Intelligence (IJCAI 2016)
+      </li>
 
-        <li class="">
-            Francès, G., and Geffner, H. 2015.
-            <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.icaps2015.slug }}"><span class="contrast">{{ site.pubs.icaps2015.title }}</span></a>.
-            In Proc. 25th Int. Conf. on Automated Planning and Scheduling (ICAPS 2015).
-        </li>
+      <li class="">
+          <span class="pubyear">[2015]</span> Francès, G., and Geffner, H.
+          <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.icaps2015.slug }}" class="contrast">{{ site.pubs.icaps2015.title }}</a>.
+          In Proc. 25th Int. Conf. on Automated Planning and Scheduling (ICAPS 2015).
+      </li>
 
-        <li class="">
-            Ferrer-Mestres, J., Francès, G., and Geffner, H. 2015.
-            <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.planrob2015.slug }}"><span class="contrast">{{ site.pubs.planrob2015.title }}</span></a>.
-            In Proc. 25th Int. Conf. on Automated Planning and Scheduling (ICAPS 2015).
-        </li>
+      <li class="">
+          <span class="pubyear">[2015]</span> Ferrer-Mestres, J., Francès, G., and Geffner, H.
+          <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.planrob2015.slug }}" class="contrast">{{ site.pubs.planrob2015.title }}</a>.
+          In Proc. 25th Int. Conf. on Automated Planning and Scheduling (ICAPS 2015).
+      </li>
+  </ul>
+</main>
 
-    </ol>
-
-
-
-  <!--<ul class="content-listing ">-->
-    <!--{% for post in site.posts %}-->
-        <!--<li class="listing">-->
-          <!--<hr class="slender">-->
-          <!--<a href="{{ post.url | prepend: site.baseurl }}"><h3 class="contrast">{{ post.title }}</h3></a>-->
-          <!--<br><span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>-->
-          <!--<div>{{ post.excerpt }}</div>-->
-        <!--</li>-->
-    <!--{% endfor %}-->
-  <!--</ul>-->
-
-
-
-
-
-
-
+{% include footer.html %}

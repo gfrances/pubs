@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: page
 title: "Modeling and Computation in Planning: Better Heuristics from More Expressive Languages (ICAPS 2015)"
 nav_exclude: true
 

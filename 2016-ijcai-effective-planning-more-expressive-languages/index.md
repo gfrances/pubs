@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: page
 title: "Effective Planning with More Expressive Languages (IJCAI 2016)"
 nav_exclude: true
 

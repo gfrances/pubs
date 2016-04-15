@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: page
 title: "E-STRIPS: Existential Quantification in Planning and Constraint Satisfaction"
 nav_exclude: true
 ---
