@@ -1,0 +1,61 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+baseurl: /pubs
+url: # "http://yourdomain.com" # the base hostname & protocol for your site
+title: Guillem Francès' Academic Publications
+description: > # this means to ignore newlines until "baseurl:"
+  This site contains data and information linked to my academic publications
+subtitle: Content-centric blogging
+author: Guillem Francès
+#simple_search: http://google.com/search
+description: A Jekyll theme for content-rich sites
+name: tufte
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+permalink: /articles/:short_year/:title
+timezone: America/New_York
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+
+post:
+  template: _post.txt
+  extension: md
+
+page:
+  template: _page.txt
+  extension: md
+
+editor: gvim
+
+git:
+  branch: master
+
+transfer:
+  command: rsync
+  settings: -av
+  source: _site/
+  destination: #~/Git/clayh53.github.com/
+
+pubs:
+  icaps2015:
+    title: "Modeling and Computation in Planning: Better Heuristics from More Expressive Languages"
+    slug: 2015-icaps-better-heuristics-more-expressive-languages
+
+  planrob2015:
+    title: "Planning with State Constraints and its Application to Combined Task and Motion Planning"
+    slug: 2015-icaps-combined-task-motion-planning
+
+  ijcai2016existential:
+    title: "E-STRIPS: Existential Quantification in Planning and Constraint Satisfaction"
+    slug: 2016-ijcai-existential-quantification-planning-csp
+
+  ijcai2016effective:
+    title: "Effective Planning with More Expressive Languages"
+    slug: 2016-ijcai-effective-planning-more-expressive-languages
+
+
