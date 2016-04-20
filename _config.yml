@@ -63,6 +63,10 @@ pubs:
     title: "Effective Planning with More Expressive Languages"
     slug: 2016-ijcai-effective-planning-more-expressive-languages
 
+  eumas2014:
+    title: "Decision Making in Agent-Based Models"
+    slug: 2014-decision-making-agent-based-models
+
 urls:
   fs: "https://bitbucket.org/gfrances/fs0"
 
