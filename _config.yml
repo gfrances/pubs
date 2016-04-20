@@ -7,9 +7,9 @@
 
 baseurl: /pubs
 url: "http://gfrances.github.io/pubs" # "http://yourdomain.com" # the base hostname & protocol for your site
-title: Guillem Francès' Academic Publications
+title: Academic Publications
 description: > # this means to ignore newlines until "baseurl:"
-  All data and information on my academic publications
+  Data and information from a number of academic publications
 subtitle: Content-centric blogging
 author: Guillem Francès
 #simple_search: http://google.com/search
