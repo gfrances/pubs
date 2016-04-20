@@ -44,7 +44,8 @@ For the sake of convenience, a tarball with all the necessary files can be downl
 ## Benchmarks
 
 The exact benchmarks that were used to run the tests for the experimental section of the paper can be found
-[here](benchmarks). Each subdirectory name (e.g. `block-grouping-strips-ex/`)
+[here](https://github.com/gfrances/pubs/tree/gh-pages/2015-icaps-better-heuristics-more-expressive-languages/benchmarks).
+Each subdirectory name (e.g. `block-grouping-strips-ex/`)
 is made up by the name of the particular planning domain (`block-grouping`) plus a number of tags
 indicating the type of encoding (STRIPS with existential quantification, in this case, but could also be
 e.g. `fn` for Functional STRIPS, or merely `strips` for standard STRIPS without existential quantification).
