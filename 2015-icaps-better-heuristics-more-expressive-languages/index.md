@@ -14,6 +14,23 @@ The paper discusses how a planning language which is more expressive than standa
 
  This paper was awarded the [ICAPS Outstanding Student Paper Runner-up](http://icaps15.icaps-conference.org/technical/papers.html).
 
+## Abstract
+
+Most of the key computational ideas in planning have been
+developed for simple planning languages where action preconditions and goals are conjunctions of propositional atoms.
+Preconditions and goals that do not fit into this form are
+normally converted into it either manually or automatically. In
+this work, we show that this modeling choice hides important structural information, resulting in poorer heuristics and
+weaker planning performance. From a theoretical point of view, we show that the direct generalization of relaxed
+planning graph heuristics to more expressive languages that implicitly allow conjunctions of atoms
+with more than one state variable leaves open a crisp gap, as it fails to properly account
+for the constraints over these variables. The simple propositional languages that are standard in planning do not remove
+this gap but “hide it under the rug” by forcing atoms to be of the form X = c, where c is a constant and X is a
+(usually boolean) state variable. Closing this gap in the computation of the relaxed planning graph
+for more expressive languages leads to a more accurate but intractable heuristic, yet a cost-effective tradeoff
+can be achieved using local forms of constraint propagation that result in better heuristics, better
+plans, and a more effective search. We show this empirically over a diverse set of illustrative examples
+using a fragment of the Functional STRIPS planning language.
 
 ## The FS0 planner
 As of now, the [FS0 main repository](https://bitbucket.org/gfrances/fs0) contains a minimum of information to download and run our planner. For the sake of convenience, a tarball with all the necessary files are provided [here](https://bitbucket.org/gfrances/pubs/downloads/fs0-planner.tgz). Since this is a continuously evolving prototype, however, changes might break backwards compatibility, etc., so in case anything does not work as expected, please do not hesitate to contact Guillem Francès (<guillem.frances@upf.edu>)
