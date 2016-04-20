@@ -63,5 +63,7 @@ pubs:
     title: "Effective Planning with More Expressive Languages"
     slug: 2016-ijcai-effective-planning-more-expressive-languages
 
+urls:
+  fs: "https://bitbucket.org/gfrances/fs0"
 
 
