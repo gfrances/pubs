@@ -12,9 +12,9 @@ The paper discusses how to integrate task and motion planning through the use of
 ## Reference
 
 	@inproceedings{ferrermestres2015,
-		author = "Ferrer-Mestres, Jonathan and Franc{\`e}s, Guillem and Geffner, Hector",
+		author = "Ferrer-Mestres, J. and Franc{\`e}s, G. and Geffner, H.",
 		title = "Planning with State Constraints and its Application to Combined Task and Motion Planning",
-		booktitle = "PlanRob - Workshop on Planning and Robotics, 25th International Conference on Automated Planning and Scheduling (ICAPS)",
+		booktitle = "PlanRob - Workshop on Planning and Robotics, 25th Int. Conf. on Automated Planning and Scheduling",
 		pages = "13--22",
 		year = "2015"
 	}

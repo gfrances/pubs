@@ -16,9 +16,9 @@ Expressive Languages"]({{ '/' | prepend: site.baseurl }}{{ site.pubs.icaps2015.s
 ## Reference
 
 	@inproceedings{frances2016effective,
-		author = "Franc{\`e}s, Guillem and Geffner, Hector",
+		author = "Franc{\`e}s, G. and Geffner, H.",
 		title = "Effective Planning with More Expressive Languages",
-		booktitle = "Proceedings of the 25th International Joint Conference on Artificial Intelligence (IJCAI)",
+		booktitle = "Proc. 25th Int. Joint Conf. on Artificial Intelligence",
 		pages = "To appear",
 		year = "2016"
 	}

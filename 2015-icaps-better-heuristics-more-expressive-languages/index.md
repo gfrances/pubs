@@ -24,10 +24,9 @@ The [benchmarks directory](https://bitbucket.org/gfrances/pubs/src/master/icaps2
 ## Reference
 
 	@inproceedings{frances2015modeling,
-		author = "Franc{\`e}s, Guillem and Geffner, Hector",
+		author = "Franc{\`e}s, G. and Geffner, H.",
 		title = "Modeling and Computation in Planning: Better Heuristics from More Expressive Languages",
-		booktitle = "Proceedings of the 25th International Conference on Automated Planning and Scheduling (ICAPS)",
+		booktitle = "Proc. 25th Int. Conf. on Automated Planning and Scheduling",
 		pages = "70--78",
 		year = "2015"
 	}
-

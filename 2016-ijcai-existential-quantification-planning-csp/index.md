@@ -27,9 +27,9 @@ and with state-of-the-art STRIPS planners over compiled and propositional encodi
 ## Reference
 
 	@inproceedings{frances2016existential,
-		author = "Franc{\`e}s, Guillem and Geffner, Hector",
-		title = "E-STRIPS: Existential Quantification in Planning and Constraint Satisfaction",
-		booktitle = "Proceedings of the 25th International Joint Conference on Artificial Intelligence (IJCAI)",
-		pages = "To appear",
+		author = "Franc{\`e}s, G. and Geffner, H.",
+		title = "{E-STRIPS}: Existential Quantification in Planning and Constraint Satisfaction",
+		booktitle = "Proc. 25th Int. Joint Conf. on Artificial Intelligence",
+		pages = "To Appear",
 		year = "2016"
 	}
