@@ -4,6 +4,9 @@ title: "E-STRIPS: Existential Quantification in Planning and Constraint Satisfac
 nav_exclude: true
 ---
 
+_You can download the paper [here]({{ '/papers/2016-ijcai-existential-quantification-planning-csp.pdf' | prepend: site.baseurl }})_.
+
+
 ## Abstract
 
 Existentially quantified variables in goals and action preconditions are part of the standard PDDL
