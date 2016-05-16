@@ -5,6 +5,9 @@ nav_exclude: true
 
 ---
 
+_You can download the paper [here]({{ '/papers/2016-ijcai-effective-planning-more-expressive-languages.pdf' | prepend: site.baseurl }})_.
+
+
 This paper is an invited submission to the IJCAI 2016 Sister Conferences Track of the awarded
 ["Modeling and Computation in Planning: Better Heuristics from More
 Expressive Languages"]({{ '/' | prepend: site.baseurl }}{{ site.pubs.icaps2015.slug }}), ICAPS 2015.

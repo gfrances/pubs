@@ -5,6 +5,8 @@ nav_exclude: true
 
 ---
 
+_You can download the paper [here]({{ '/papers/2015-icaps-better-heuristics-more-expressive-languages.pdf' | prepend: site.baseurl }})_.
+
 
 The paper discusses how a planning language which is more expressive than standard PDDL is able to better capture
  the structure of planning problems, which in turns allows not only a more compact representation,

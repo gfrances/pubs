@@ -8,30 +8,34 @@ layout: default
 
   <p>
       This site contains information and data (benchmarks, etc.) relevant to some of my academic publications.
-      Click on the publication title to access its information.</p>
+      Click on the publication title to access further details about it.</p>
 
   <ul class="content-listing">
 
       <li class="">
+          {% include paper_pdf.html pdf="2016-ijcai-existential-quantification-planning-csp.pdf" %}
           <span class="pubyear">[2016]</span> Francès, G., and Geffner, H.
           <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.ijcai2016existential.slug }}" class="contrast">{{ site.pubs.ijcai2016existential.title }}</a>.
           In Proc. of the 25th Int. Joint Conf. on Artificial Intelligence (IJCAI 2016)
-          <a href="{{ '/papers/2016-ijcai-existential-quantification-planning-csp.pdf' | prepend: site.baseurl }}">[PDF]</a>
+
       </li>
 
       <li class="">
+          {% include paper_pdf.html pdf="2016-ijcai-effective-planning-more-expressive-languages.pdf" %}
           <span class="pubyear">[2016]</span> Francès, G., and Geffner, H.
           <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.ijcai2016effective.slug }}" class="contrast">{{ site.pubs.ijcai2016effective.title }}</a>.
           In Proc. of the 25th Int. Joint Conf. on Artificial Intelligence (IJCAI 2016)
       </li>
 
       <li class="">
+          {% include paper_pdf.html pdf="2015-icaps-better-heuristics-more-expressive-languages.pdf" %}
           <span class="pubyear">[2015]</span> Francès, G., and Geffner, H.
           <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.icaps2015.slug }}" class="contrast">{{ site.pubs.icaps2015.title }}</a>.
           In Proc. 25th Int. Conf. on Automated Planning and Scheduling (ICAPS 2015).
       </li>
 
       <li class="">
+          {% include paper_pdf.html pdf="2015-planrob-ferrer-frances-geffner-planning-state-constraints-combined-task-motion-planning.pdf" %}
           <span class="pubyear">[2015]</span> Ferrer-Mestres, J., Francès, G., and Geffner, H.
           <a href="{{ '/' | prepend: site.baseurl }}{{ site.pubs.planrob2015.slug }}" class="contrast">{{ site.pubs.planrob2015.title }}</a>.
           In Proc. 25th Int. Conf. on Automated Planning and Scheduling (ICAPS 2015).

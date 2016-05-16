@@ -4,6 +4,7 @@ title: "Planning with State Constraints and its Application to Combined Task and
 nav_exclude: true
 ---
 
+_You can download the paper [here]({{ '/papers/2015-planrob-ferrer-frances-geffner-planning-state-constraints-combined-task-motion-planning.pdf' | prepend: site.baseurl }})_.
 
 The paper discusses how to integrate task and motion planning through the use of the [`FS0` planner](https://bitbucket.org/gfrances/fs0) presented in
 [(Frances and Geffner 2015)]({{ '/' | prepend: site.baseurl }}{{ site.pubs.icaps2015.slug }}), augmented with `non-overlap` state constraints.

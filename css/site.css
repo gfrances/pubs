@@ -24,3 +24,9 @@ a.contrast {
 pre { /* Allow more width for code references, etc. */
     width: 75%;
 }
+
+img.pdf {
+	position: relative;
+	top: 10px;
+	padding-right: 4px;
+}
