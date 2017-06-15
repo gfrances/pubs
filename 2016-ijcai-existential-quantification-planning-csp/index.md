@@ -46,6 +46,6 @@ Random instance generators are available [under request]({{ '/about' | prepend: 
 		author = "Franc{\`e}s, G. and Geffner, H.",
 		title = "{E-STRIPS}: Existential Quantification in Planning and Constraint Satisfaction",
 		booktitle = "Proc. 25th Int. Joint Conf. on Artificial Intelligence",
-		pages = "To Appear",
+		pages = "3082",
 		year = "2016"
 	}

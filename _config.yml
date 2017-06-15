@@ -47,13 +47,9 @@ gems:
   - jekyll-paginate
 
 pubs:
-  icaps2015:
-    title: "Modeling and Computation in Planning: Better Heuristics from More Expressive Languages"
-    slug: 2015-icaps-better-heuristics-more-expressive-languages
-
-  planrob2015:
-    title: "Planning with State Constraints and its Application to Combined Task and Motion Planning"
-    slug: 2015-icaps-combined-task-motion-planning
+  ijcai2017purely:
+    title: "Purely Declarative Action Representations are Overrated: Classical Planning with Simulators"
+    slug: 2017-ijcai-planning-with-simulators
 
   ijcai2016existential:
     title: "E-STRIPS: Existential Quantification in Planning and Constraint Satisfaction"
@@ -62,6 +58,14 @@ pubs:
   ijcai2016effective:
     title: "Effective Planning with More Expressive Languages"
     slug: 2016-ijcai-effective-planning-more-expressive-languages
+
+  icaps2015:
+    title: "Modeling and Computation in Planning: Better Heuristics from More Expressive Languages"
+    slug: 2015-icaps-better-heuristics-more-expressive-languages
+
+  planrob2015:
+    title: "Planning with State Constraints and its Application to Combined Task and Motion Planning"
+    slug: 2015-icaps-combined-task-motion-planning
 
   eumas2014:
     title: "Decision Making in Agent-Based Models"

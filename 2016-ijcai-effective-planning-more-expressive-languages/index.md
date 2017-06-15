@@ -42,6 +42,6 @@ Experiments illustrating the computational value of planning with more expressiv
 		author = "Franc{\`e}s, G. and Geffner, H.",
 		title = "Effective Planning with More Expressive Languages",
 		booktitle = "Proc. 25th Int. Joint Conf. on Artificial Intelligence",
-		pages = "To appear",
+		pages = "4155",
 		year = "2016"
 	}
