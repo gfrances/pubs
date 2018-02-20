@@ -47,6 +47,11 @@ gems:
   - jekyll-paginate
 
 pubs:
+
+  frances2017effective:
+    title: "Effective Planning with Expressive Languages"
+    slug: 2017-frances-dissertation
+
   ijcai2017purely:
     title: "Purely Declarative Action Representations are Overrated: Classical Planning with Simulators"
     slug: 2017-ijcai-planning-with-simulators
@@ -77,6 +82,6 @@ pubs:
 
 
 urls:
-  fs: "https://bitbucket.org/gfrances/fs0"
+  fs: "https://github.com/aig-upf/fs"
 
 
